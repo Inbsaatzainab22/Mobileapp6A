@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lab3_activity">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="#FFFFFF"> <!-- Set background color to white -->
+        <!-- First line of bold text -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Digital Calculator"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Text views for first name and last name -->
+        <LinearLayout
+            android:id="@+id/numberLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/titleTextView"
+            android:layout_marginTop="24dp">
+
+            <EditText
+                android:id="@+id/firstNumEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="24sp"
+                android:inputType="numberDecimal"
+                android:text="Enter #1"
+                />
+
+            <EditText
+                android:id="@+id/secondNumEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="24sp"
+                android:inputType="numberDecimal"
+                android:text="Enter #2"
+                />
+        </LinearLayout>
+
+
+
+        <!-- Sign up button with green background color -->
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/numberLayout"
+            android:layout_marginTop="24dp">
+        <Button
+            android:id="@+id/plusButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="+"
+            android:background="@android:color/holo_blue_light"/>
+
+            <Button
+                android:id="@+id/minusButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:text="-"
+                android:background="@android:color/holo_blue_light"/>,
+            <Button
+                android:id="@+id/multipleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:text="*"
+                android:background="@android:color/holo_blue_light"/>
+            <Button
+                android:id="@+id/divideButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:text="/"
+                android:background="@android:color/holo_blue_light"
+                />
+        </LinearLayout>
+        <!-- Text line containing the link to log in -->
+        <TextView
+            android:id="@+id/loginLinkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textSize="24sp"
+            android:text="Result "/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
